@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "15cef056-025a-4a60-a305-1ecea4cc6b4a",
+            "Value": {
+                "id": "2cc13541-fa0b-47f5-bb42-34e8773f5bd7",
+                "resourcePath": "paths\\enemy_zickzack_path\\enemy_zickzack_path.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "1c61f6a2-c7fb-4bd4-aa30-bebc4c559f5c",
             "Value": {
                 "id": "8f1e5c7f-da42-4d37-9f32-24645db066b5",
@@ -87,6 +95,14 @@
             }
         },
         {
+            "Key": "2dedc77d-6971-4044-af03-915aa96cbe59",
+            "Value": {
+                "id": "5cc84261-f40e-482f-9a48-283646fd4bd5",
+                "resourcePath": "views\\2dedc77d-6971-4044-af03-915aa96cbe59.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "348ca93b-b076-4c61-8a77-29f86a3d77cb",
             "Value": {
                 "id": "eb805ae4-6ebf-4af7-af34-a10571963fe4",
@@ -107,6 +123,14 @@
             "Value": {
                 "id": "854dd647-7b34-402d-a0c5-5ee85bf8b867",
                 "resourcePath": "views\\3b85abea-8420-4965-8815-9c92be720666.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3bb34198-7931-4ed3-8cab-52857c2dd174",
+            "Value": {
+                "id": "f2de0691-5869-48e0-bf2f-9a47bf8883bf",
+                "resourcePath": "views\\3bb34198-7931-4ed3-8cab-52857c2dd174.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -239,6 +263,14 @@
             }
         },
         {
+            "Key": "c6d3b383-31ed-4629-b599-b3bace558485",
+            "Value": {
+                "id": "2ab8d10c-cae4-430e-be48-ee0b35dac562",
+                "resourcePath": "scripts\\Spawn_enemy\\Spawn_enemy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "1e62efff-246e-430a-b2b8-3ff0ecbfcb08",
@@ -304,7 +336,7 @@
         }
     ],
     "script_order": [
-        
+        "c6d3b383-31ed-4629-b599-b3bace558485"
     ],
     "tutorial": ""
 }

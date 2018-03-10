@@ -4,7 +4,36 @@
     "mvc": "1.0",
     "name": "obj_enemy_swarm",
     "eventList": [
-        
+        {
+            "id": "e7f92bd0-2adf-4682-93e6-49b3ba5c03ff",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "348ca93b-b076-4c61-8a77-29f86a3d77cb"
+        },
+        {
+            "id": "718dc262-3235-41bf-bd7e-fdd747323691",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "348ca93b-b076-4c61-8a77-29f86a3d77cb"
+        },
+        {
+            "id": "eb2c4096-2326-4af8-a98c-337dcd6d46a6",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 2,
+            "m_owner": "348ca93b-b076-4c61-8a77-29f86a3d77cb"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

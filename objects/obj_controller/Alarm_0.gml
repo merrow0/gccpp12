@@ -1,6 +1,14 @@
 /// Nebelgenerator
-part_type_color1(smoke, choose(c_red, c_green));
-part_particles_create(smoke, choose(160), -300, smoketrail, 1);
-part_particles_create(smoke, choose(480), -300, smoketrail, 1);
+
+var rx1 = choose(100, 540);
+var rx2 = rx1 == 100 ? 540 : 100;
+
+part_type_color1(cloud_part_system, choose(c_red, c_green));
+part_type_orientation(cloud_part_system, 0, 360, 0, 0, false);
+part_particles_create(cloud_part_system, rx1, -300, cloud_type, 1);
+
+part_type_color1(cloud_part_system, choose(c_red, c_green));
+part_type_orientation(cloud_part_system, 0, 360, 0, 0, false);
+part_particles_create(cloud_part_system, rx2, -300, cloud_type, 1);
 
 alarm_set(0, 120);

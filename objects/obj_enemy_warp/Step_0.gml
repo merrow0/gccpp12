@@ -10,6 +10,6 @@ if (state = state.warp)
 	{
 		x = path_start_point;
 		state = state.follow_path;
-		path_start(path, 10, path_action_stop, false);
+		path_start(path, move_speed, path_action_stop, false);
 	}
 }

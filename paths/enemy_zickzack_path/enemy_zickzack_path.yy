@@ -126,6 +126,14 @@
             "x": 96,
             "y": 960,
             "speed": 100
+        },
+        {
+            "id": "98bccd9b-f0a4-4432-8c4f-b52a037234a1",
+            "modelName": "GMPathPoint",
+            "mvc": "1.0",
+            "x": 96,
+            "y": 1075.31287,
+            "speed": 100
         }
     ],
     "precision": 4,

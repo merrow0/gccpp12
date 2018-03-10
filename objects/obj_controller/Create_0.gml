@@ -1,6 +1,7 @@
 randomize();
 
-enemy_wave_delay = 10;
+enemy_total = 10;
+enemy_count = 0;
 
 
 gamepad_queue = ds_list_create();
@@ -22,9 +23,10 @@ cloud_part_system = part_system_create()
 cloud_type = part_type_create()
 part_type_shape(cloud_type, pt_shape_cloud);
 //part_type_scale(ind, xscale, yscale);
-part_type_size(cloud_type, 15, 15, 0, 0);
-part_type_speed(cloud_type, 0.1, 0.2, -0.2, 0)
-part_type_life(cloud_type, 600, 600)
-part_type_gravity(cloud_type, 0.21, 270);
+part_type_size(cloud_type, 15, 10, 0, 0);
+part_type_speed(cloud_type, 2, 3, 0, 0)
+part_type_direction(cloud_type, 270, 270, 0, 0);
+part_type_life(cloud_type, 1000, 1000)
+//part_type_gravity(cloud_type, 0.21, 270);
 
 alarm_set(0, 10);

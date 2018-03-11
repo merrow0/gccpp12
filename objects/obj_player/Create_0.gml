@@ -9,3 +9,5 @@ cross = instance_create_layer(x, y - 100, "Instances", obj_cross);
 cross.direction = direction;
 
 sort_order = true;
+can_shoot = true;
+shoot_offset = 4;

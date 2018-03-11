@@ -21,12 +21,16 @@ if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue
 	ds_list_sort(obj_controller.gamepad_queue, sort_order);
 }
 
-if (gamepad_button_check(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_face1))
+if (gamepad_button_check(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_face1) & can_shoot)
 {
-	with (instance_create_layer(x, y - 3, "Instances", obj_bullet))
+	shoot_offset *= -1;
+	with (instance_create_layer(x + shoot_offset, y - 3, "Instances", obj_bullet))
 	{
 		direction = obj_cross.direction;
 		image_angle = direction;
 		speed = other.bullet_speed;
 	}
+	
+	can_shoot = false;
+	alarm_set(0, 10);
 }

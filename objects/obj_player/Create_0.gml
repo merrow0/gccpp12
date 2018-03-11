@@ -1,6 +1,7 @@
 move_speed = 8;
 aim_speed = 4;
 bullet_speed = 20;
+hp = obj_controller.player_total_hp;
 
 direction = 90;
 image_angle = direction;

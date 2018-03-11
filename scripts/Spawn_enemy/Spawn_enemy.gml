@@ -10,11 +10,11 @@ for (i = 1; i < enemy_count + 1; i++)
 {
 	if (awake_right)
 	{
-		var enemy = instance_create_layer(640, 128, "Instances", obj_enemy_warp);    
+		var enemy = instance_create_layer(660, 128, "Instances", obj_enemy_warp);    
 	}
 	else
 	{
-		var enemy = instance_create_layer(0, 128, "Instances", obj_enemy_warp);
+		var enemy = instance_create_layer(-20, 128, "Instances", obj_enemy_warp);
 	}
 	
 	awake_right = !awake_right;

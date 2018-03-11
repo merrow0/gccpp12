@@ -4,4 +4,4 @@ enum state {
 	follow_path
 }
 
-hp = 5;
+hp = 1;

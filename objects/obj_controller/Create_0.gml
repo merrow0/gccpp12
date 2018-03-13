@@ -17,7 +17,7 @@ for (var i = 0; i < gamepad_get_device_count(); i++)
 	}
 }
 
-// Nebelgenerator
+// Nebel
 cloud_part_system = part_system_create()
 //part_system_depth(cloud_part_system, depth-1)
 
@@ -29,5 +29,40 @@ part_type_speed(cloud_type, 2, 3, 0, 0)
 part_type_direction(cloud_type, 270, 270, 0, 0);
 part_type_life(cloud_type, 1000, 1000)
 //part_type_gravity(cloud_type, 0.21, 270);
+
+// Explosion
+explode_system = part_system_create();
+
+explode_type = part_type_create();
+part_type_sprite(explode_type, spr_spike, 0, 0, 1)
+part_type_size(explode_type, 1, 2, 0, 0);
+part_type_colour3(explode_type, c_yellow, c_orange, c_red);
+part_type_alpha3(explode_type, 1, 1, 0);
+part_type_speed(explode_type, 10, 20, -1.2, 0.5);
+part_type_size(explode_type, 1, 2, -0.08, 0);
+part_type_direction(explode_type, 0, 359, 0, 0);
+part_type_orientation(explode_type, 0, 359, 2, 1, 0);
+//part_type_blend(explode_type,1);
+part_type_life(explode_type, 40, 80);
+
+explode_emitter = part_emitter_create(explode_system);
+
+
+//Schuss
+shot_system = part_system_create();
+
+shot_type = part_type_create();
+part_type_shape(shot_type, pt_shape_disk)
+part_type_size(shot_type, 0.1, 0.2, -0.005, 0);
+part_type_colour1(shot_type, c_yellow);
+part_type_alpha2(shot_type, 0.8, 0.2);
+part_type_speed(shot_type, 1, 3, 0, 0);
+part_type_direction(shot_type, 85, 95, 0, 0);
+part_type_gravity(shot_type, 0.3, 270);
+part_type_blend(shot_type, 1);
+part_type_life(shot_type, 30, 90);
+
+shot_emitter = part_emitter_create(shot_system);
+
 
 alarm_set(0, 10);

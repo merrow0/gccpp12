@@ -1,4 +1,4 @@
-text = "kacknoob";
+text = "hure";
 alarm_set(0, 60);
 alpha = 1;
 bremse = 0;

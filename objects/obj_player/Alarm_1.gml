@@ -1,0 +1,1 @@
+gamepad_set_vibration(ds_list_find_value(obj_controller.gamepad_queue, 0), 0, 0);

@@ -20,6 +20,9 @@ if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue
 	sort_order = !sort_order;
 	ds_list_sort(obj_controller.gamepad_queue, sort_order);
 	image_index = sort_order ? 0 : 1;
+	
+	gamepad_set_vibration(ds_list_find_value(obj_controller.gamepad_queue, 0), 1, 1);
+	alarm_set(1,60);
 }
 
 if (gamepad_button_check(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_face1) & can_shoot)

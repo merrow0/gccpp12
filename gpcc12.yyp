@@ -194,7 +194,7 @@
             "Key": "69706057-4345-4be7-9520-2e23e26184c8",
             "Value": {
                 "id": "d8de84be-0451-46f2-bc98-338bdc11076b",
-                "resourcePath": "fonts\\neuro\\neuro.yy",
+                "resourcePath": "fonts\\fnt_neuro\\fnt_neuro.yy",
                 "resourceType": "GMFont"
             }
         },
@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "d9786470-44dd-4173-8a43-bb43e9961408",
+            "Value": {
+                "id": "358d8ff4-53f7-486b-baa2-0c0323da630e",
+                "resourcePath": "sprites\\spr_loot\\spr_loot.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "deea2492-541e-4037-9470-c142cd695736",
             "Value": {
                 "id": "587d31ff-2513-4d0c-ab4e-48ac30336535",
@@ -396,6 +404,14 @@
                 "id": "455a50eb-bbc8-436b-bac4-a29284d63c75",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "fc9e521a-79a7-42a7-9454-b735ff424cd2",
+            "Value": {
+                "id": "c70c812a-945f-4e73-816b-8cc06c997cf4",
+                "resourcePath": "objects\\obj_loot\\obj_loot.yy",
+                "resourceType": "GMObject"
             }
         }
     ],

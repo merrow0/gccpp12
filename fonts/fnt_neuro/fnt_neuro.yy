@@ -2,7 +2,7 @@
     "id": "69706057-4345-4be7-9520-2e23e26184c8",
     "modelName": "GMFont",
     "mvc": "1.0",
-    "name": "neuro",
+    "name": "fnt_neuro",
     "AntiAlias": 1,
     "TTFName": "",
     "bold": false,

@@ -1,5 +1,5 @@
 move_speed = 8;
-aim_speed = 4;
+aim_speed = 1;
 bullet_speed = 20;
 hp = obj_controller.player_total_hp;
 
@@ -11,4 +11,4 @@ cross.direction = direction;
 
 sort_order = true;
 can_shoot = true;
-shoot_offset = 4;
+shoot_offset = 10;

@@ -57,7 +57,7 @@ if (hp <= 0)
 	
 
 
-// *** Workarround
+/* *** DEBUG ***
 if (keyboard_check(vk_left))
 	x -= 5;
 else if (keyboard_check(vk_right))
@@ -79,3 +79,4 @@ if (keyboard_check(vk_space)  & can_shoot)
 	can_shoot = false;
 	alarm_set(0, 10);
 }
+*/

@@ -4,6 +4,9 @@ hp--;
 
 if (hp <= 0)
 {
+	audio_sound_pitch(snd_enemy_explode, random_range(0.8, 1.2));
+	audio_play_sound(snd_enemy_explode, 10, false);
+	
 	instance_destroy();
 	
 	part_emitter_region(obj_controller.explode_system, obj_controller.explode_emitter, x, x, y, y, ps_shape_ellipse, ps_distr_gaussian);

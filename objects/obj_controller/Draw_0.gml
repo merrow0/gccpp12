@@ -1,4 +1,4 @@
-var xscale = obj_player.hp / player_total_hp;
+var xscale = instance_exists(obj_player) ? obj_player.hp / player_total_hp : 0;
 draw_sprite_ext(spr_health, 0, 40, 54, xscale, 1, 0, c_white, 1);
 draw_sprite(spr_bar, 0, 140, 54);
 

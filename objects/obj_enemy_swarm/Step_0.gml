@@ -8,7 +8,7 @@ if (change_dir)
 direction = lerp(direction, dest_dir, 0.1);
 image_angle = direction;
 
-if (shoot_count == 0 && !irandom(100 * instance_count div 2))
+if (shoot_count == 0 && !(floor(y) % 150))
 {
 	shoot_count = max_shoot;
 	shoot_from_dir = image_angle - shoot_dir_offset;
@@ -18,6 +18,9 @@ if (shoot_count == 0 && !irandom(100 * instance_count div 2))
 	
 if (shoot_count > 0 && can_shoot)
 {
+	audio_sound_pitch(snd_enemy_shot_reverb, random_range(0.8, 0.9));
+	audio_play_sound(snd_enemy_shot_reverb, 5, false);
+	
 	var bullet = instance_create_layer(x, y, "Instances", obj_enemy_bullet);
 	bullet.speed = shoot_speed;
 	shoot_dir += shoot_offset;

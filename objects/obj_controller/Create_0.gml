@@ -1,3 +1,11 @@
+enum gamestate {
+	menu,
+	play,
+	gameover
+}
+
+main_state = gamestate.menu;
+
 randomize();
 
 draw_set_font(fnt_neuro);
@@ -21,6 +29,9 @@ for (var i = 0; i < gamepad_get_device_count(); i++)
 		gamepad_set_axis_deadzone(i, 0.5);
 	}
 }
+
+ds_list_add(gamepad_queue, 0);
+ds_list_add(gamepad_queue, 1);
 
 // Nebel
 cloud_part_system = part_system_create();

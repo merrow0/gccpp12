@@ -18,8 +18,8 @@ if (shoot_count == 0 && !(floor(y) % 150))
 	
 if (shoot_count > 0 && can_shoot)
 {
-	audio_sound_pitch(snd_enemy_shot_reverb, random_range(0.8, 0.9));
-	audio_play_sound(snd_enemy_shot_reverb, 5, false);
+	audio_sound_pitch(snd_enemy_shot, random_range(0.8, 0.9));
+	audio_play_sound(snd_enemy_shot, 5, false);
 	
 	var bullet = instance_create_layer(x + lengthdir_x(12, shoot_dir), y + lengthdir_y(12, shoot_dir), "Instances", obj_enemy_bullet);
 	bullet.speed = shoot_speed;

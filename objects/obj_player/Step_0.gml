@@ -1,3 +1,19 @@
+// Detect Lunze-color 
+var current_color = draw_getpixel(x-5, y-9);
+var red = colour_get_red(current_color);
+var blue = colour_get_blue(current_color);
+
+if (red > 60)
+	lunz_color = "red";
+else if (blue > 30)
+	lunz_color = "blue";
+else
+	lunz_color = "kacknoob";
+	
+if (lunz_color == "red" && shield_color == c_blue) || (lunz_color == "blue" && shield_color == c_red)
+	hp -= 2;
+	
+// Move ship
 var hspd = gamepad_axis_value(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_axislh) * move_speed;
 x += hspd;
 
@@ -14,7 +30,7 @@ x = clamp(x, 50, 590);
 cross.x = x + cx;
 cross.y = y + cy;
 
-
+// Change player
 if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_shoulderr))
 {
 	sort_order = !sort_order;
@@ -25,6 +41,7 @@ if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue
 	alarm_set(1,60);
 }
 
+// Player shoot
 if (gamepad_button_check(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_face1) & can_shoot)
 {
 	audio_sound_pitch(snd_player_shot, random_range(0.5, 0.6));
@@ -42,6 +59,7 @@ if (gamepad_button_check(ds_list_find_value(obj_controller.gamepad_queue, 1), gp
 	alarm_set(0, 10);
 }
 
+// HP check
 if (hp < obj_controller.player_total_hp)
 	hp++;
 	

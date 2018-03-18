@@ -8,12 +8,17 @@ if (main_state == gamestate.menu)
 	
 	if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_start)
 		|| gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_start))
+	{
+		part_particles_clear(obj_controller.cloud_part_system);
 		main_state = gamestate.play;
+	}
 }
 else if (main_state == gamestate.play)
 {
 	if (instance_exists(obj_title))
+	{
 		instance_destroy(obj_title);
+	}
 		
 	if (!instance_exists(obj_player))
 	{

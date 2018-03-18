@@ -13,6 +13,8 @@ sort_order = true;
 can_shoot = true;
 shoot_offset = 10;
 
+lunz_color = noone;
+
 shield_color = c_red;
 shield_xscale = 1;
 shield_yscale = 1;

@@ -13,3 +13,5 @@ if (state = state.warp)
 		path_start(path, move_speed, path_action_stop, false);
 	}
 }
+
+image_angle -= 12;

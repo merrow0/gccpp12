@@ -17,6 +17,7 @@ enemy_count = 0;
 
 player_total_hp = 100;
 player_points = 0;
+highscore = 0;
 
 gamepad_queue = ds_list_create();
 
@@ -54,13 +55,12 @@ explode_system = part_system_create();
 explode_type = part_type_create();
 part_type_sprite(explode_type, spr_spike, 0, 0, 1);
 part_type_size(explode_type, 1, 2, 0, 0);
-part_type_colour3(explode_type, c_yellow, c_orange, c_red);
-part_type_alpha3(explode_type, 1, 1, 0);
+//part_type_alpha3(explode_type, 1, 1, 0);
 part_type_speed(explode_type, 10, 20, -1.2, 0.5);
 part_type_size(explode_type, 1, 2, -0.08, 0);
 part_type_direction(explode_type, 0, 359, 0, 0);
 part_type_orientation(explode_type, 0, 359, 2, 1, 0);
-//part_type_blend(explode_type,1);
+part_type_blend(explode_type, 0);
 part_type_life(explode_type, 40, 80);
 
 explode_emitter = part_emitter_create(explode_system);

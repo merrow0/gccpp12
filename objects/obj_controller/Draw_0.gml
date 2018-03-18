@@ -8,3 +8,8 @@ var d = 8 - len;
 player_points_text = d * "0" + player_points_text; 
 
 draw_text_ext_transformed(480, 35, player_points_text, 2, 100, 2, 2, 0);
+
+if (main_state == gamestate.gameover)
+{
+	draw_text(320, 600, "HIGHSCORE: " + string(highscore));
+}

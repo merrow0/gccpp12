@@ -6,7 +6,8 @@ if (main_state == gamestate.menu)
 		instance_create_layer(320, 480, "Instances", obj_title);
 	}
 	
-	if (keyboard_check_pressed(vk_f1))
+	if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_start)
+		|| gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_start))
 		main_state = gamestate.play;
 }
 else if (main_state == gamestate.play)
@@ -21,7 +22,7 @@ else if (main_state == gamestate.play)
 		audio_play_sound(snd_play_blast, 10, false);
 		audio_play_sound(snd_play, 10, true);
 		
-		instance_create_layer(320, 900, "Instances", obj_player);
+		instance_create_layer(320, 860, "Instances", obj_player);
 	}
 	
 	enemy_count = instance_number(obj_enemy);
@@ -37,14 +38,29 @@ else if (main_state == gamestate.gameover)
 {
 	with (obj_enemy)
 		instance_destroy();
-		
+	
 	if (!instance_exists(obj_gameover))
 	{
 		audio_stop_sound(snd_play);
 		audio_play_sound(snd_gameover, 10, true);
 		instance_create_layer(320, 480, "Instances", obj_gameover);
+		
+		
+		var file = file_text_open_read(working_directory + "highscore");
+		
+		if (file != -1)
+		{
+			highscore = file_text_read_real(file);
+			file_text_close(file);
+		}
+		
+		highscore = player_points > highscore ? player_points : highscore;
+		file = file_text_open_write(working_directory + "highscore");
+		file_text_write_real(file, highscore);
+		file_text_close(file);
 	}
 	
-	if (keyboard_check_pressed(vk_enter))
+	if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_start)
+		|| gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_start))
 		room_restart();
 }

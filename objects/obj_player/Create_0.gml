@@ -12,3 +12,8 @@ cross.direction = direction;
 sort_order = true;
 can_shoot = true;
 shoot_offset = 10;
+
+shield_color = c_red;
+shield_xscale = 1;
+shield_yscale = 1;
+shield_alpha = 1;

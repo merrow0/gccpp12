@@ -70,7 +70,10 @@ if (hp <= obj_controller.player_total_hp div 2)
 }
 
 if (hp <= 0)
+{
 	instance_destroy();
+	obj_controller.shake_intense = 25;
+}
 	
 	
 

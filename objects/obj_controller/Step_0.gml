@@ -11,6 +11,8 @@ if (main_state == gamestate.menu)
 	{
 		part_particles_clear(obj_controller.cloud_part_system);
 		main_state = gamestate.play;
+		
+		shake_intense = 15;
 	}
 }
 else if (main_state == gamestate.play)
@@ -46,6 +48,9 @@ else if (main_state == gamestate.gameover)
 	
 	if (!instance_exists(obj_gameover))
 	{
+		gamepad_set_vibration(ds_list_find_value(gamepad_queue, 0), 0, 0);
+		gamepad_set_vibration(ds_list_find_value(gamepad_queue, 1), 0, 0);
+		
 		audio_stop_sound(snd_play);
 		audio_play_sound(snd_gameover, 10, true);
 		instance_create_layer(320, 480, "Instances", obj_gameover);

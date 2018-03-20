@@ -6,6 +6,9 @@ if (main_state == gamestate.menu)
 		instance_create_layer(320, 480, "Instances", obj_title);
 	}
 	
+	if (!instance_exists(obj_press_start))
+		instance_create_layer(320, 720, "Instances", obj_press_start);
+	
 	if (gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 0), gp_start)
 		|| gamepad_button_check_pressed(ds_list_find_value(obj_controller.gamepad_queue, 1), gp_start))
 	{
@@ -18,9 +21,10 @@ if (main_state == gamestate.menu)
 else if (main_state == gamestate.play)
 {
 	if (instance_exists(obj_title))
-	{
 		instance_destroy(obj_title);
-	}
+	
+	if (instance_exists(obj_press_start))
+		instance_destroy(obj_press_start);
 		
 	if (!instance_exists(obj_player))
 	{
@@ -53,8 +57,9 @@ else if (main_state == gamestate.gameover)
 		
 		audio_stop_sound(snd_play);
 		audio_play_sound(snd_gameover, 10, true);
-		instance_create_layer(320, 480, "Instances", obj_gameover);
 		
+		instance_create_layer(320, 480, "Instances", obj_gameover);
+		instance_create_layer(320, 720, "Instances", obj_press_start);
 		
 		var file = file_text_open_read(working_directory + "highscore");
 		

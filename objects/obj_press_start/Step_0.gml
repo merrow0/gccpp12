@@ -1,0 +1,1 @@
+image_alpha = (sin(current_time / 260) + 1) / 2;

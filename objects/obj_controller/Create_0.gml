@@ -38,6 +38,12 @@ ds_list_add(gamepad_queue, 0);
 ds_list_add(gamepad_queue, 1);
 */
 
+if (ds_list_size(gamepad_queue) != 2)
+{
+	show_message("Dieses Spiel benötigt 2 Controller, diese bitte anschließen.");
+	game_end();
+}
+
 // Nebel
 cloud_part_system = part_system_create();
 //part_system_depth(cloud_part_system, depth-1)

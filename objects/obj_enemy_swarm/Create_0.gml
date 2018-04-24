@@ -1,5 +1,8 @@
 event_inherited();
 
+image_xscale = 1.25;
+image_yscale = 1.25;
+
 speed = 1;
 direction = point_direction(x, y, obj_player.x, obj_player.y);
 dest_dir = direction;
